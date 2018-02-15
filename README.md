@@ -27,3 +27,12 @@ Once the image is ready start the service using the following command.
 ```bash
 docker run -p <portnumber>:3000 penthouse-service
 ```
+
+## Usage
+
+Penthouse needs an URL and a CSS file to extract the critical css from. Pass
+this data via GET-params to the service by requesting the endpoint as followed:
+`http://localhost:3000/?url=<website-url>&css=<css-url>`.
+
+For example:
+`http://localhost:3000/?url=http://example.com/&css=http://example.com/css/styles.css`
