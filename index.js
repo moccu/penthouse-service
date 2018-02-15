@@ -42,4 +42,4 @@ async function handleRequest(request, response) {
 
 server
 	.get(SERVER_PATH, handleRequest)
-	.listen(SERVER_PORT, () => console.log('Listening on port 3000'));
+	.listen(SERVER_PORT, () => console.log('Penthouse service is listening...'));
