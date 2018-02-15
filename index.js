@@ -36,7 +36,7 @@ async function handleRequest(request, response) {
 		response.send(critical);
 	} catch(error) {
 		console.error(error);
-		response.status(500).send('Error');
+		response.status(500).send('Error: ' + error.message);
 	}
 }
 
