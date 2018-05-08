@@ -18,8 +18,18 @@ This will start a server at port `3000`.
 Create a docker image of the penthouse-service using:
 
 ```bash
-docker build -t penthouse-service .
+docker build -t moccu/penthouse-service:latest .
 ```
+
+If you want to create a new release on Docker Hub, you need to tag and push the
+previous built image:
+
+```bash
+docker tag moccu/penthouse-service:latest moccu/penthouse-service:<version>
+docker push moccu/penthouse-service:<version>
+```
+
+Hint: remember to update the version in the package.json.
 
 Once the image is ready start the service using the following command.
 (`<portnumber>` is the port which you want to use for the service):

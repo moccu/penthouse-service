@@ -2,7 +2,7 @@
   "name": "penthouse-service",
   "description": "Service to create criticalpath css using penthouse",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.4.0",
   "author": "Moccu GmbH & Co. KG",
   "license": "Moccu License",
   "scripts": {
@@ -11,6 +11,6 @@
   "dependencies": {
     "express": "^4.16.2",
     "node-fetch": "^2.0.0",
-    "penthouse": "^1.4.0"
+    "penthouse": "1.4.0"
   }
 }
