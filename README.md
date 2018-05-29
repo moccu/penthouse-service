@@ -46,3 +46,12 @@ this data via GET-params to the service by requesting the endpoint as followed:
 
 For example:
 `http://localhost:3000/?url=http://example.com/&css=http://example.com/css/styles.css`
+
+## Options
+
+Pass optional [penthouse configuration](https://github.com/pocketjoso/penthouse#options)
+by adding them as GET-parameter. Multiple params with same name will be
+interpreted as type array.
+
+For example:
+`http://localhost:3000/?url=http://example.com/&css=http://example.com/css/styles.css&width=720&propertiesToRemove=(.*)transition(.*)&propertiesToRemove=cursor&forceInclude=.footer`
