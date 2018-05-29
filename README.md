@@ -55,3 +55,7 @@ interpreted as type array.
 
 For example:
 `http://localhost:3000/?url=http://example.com/&css=http://example.com/css/styles.css&width=720&propertiesToRemove=(.*)transition(.*)&propertiesToRemove=cursor&forceInclude=.footer`
+
+## License
+
+[LICENSE (MIT)](./LICENSE)
