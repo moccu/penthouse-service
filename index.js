@@ -35,11 +35,12 @@ async function handleRequest(request, response) {
 
 		response.send(critical);
 	} catch(error) {
-		console.error(error);
+		console.error(error); // eslint-disable-line no-console
 		response.status(500).send('Error: ' + error.message);
 	}
 }
 
 server
 	.get(SERVER_PATH, handleRequest)
-	.listen(SERVER_PORT, () => console.log('Penthouse service is listening...'));
+	.listen(SERVER_PORT, () =>
+		console.log('Penthouse service is listening...')); // eslint-disable-line no-console
