@@ -7,7 +7,7 @@
   "license": "Moccu License",
   "scripts": {
     "validate": "./node_modules/.bin/eslint . --ext .js",
-    "service": "node ./index.js"
+    "service": "node ./src/index.js"
   },
   "dependencies": {
     "express": "^4.16.3",
