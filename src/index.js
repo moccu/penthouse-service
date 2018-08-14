@@ -54,9 +54,21 @@ server
 
 		try {
 			const options = utils.parse(request.query, PENTHOUSE_ALLOWED_OPTIONS);
-			const cssString = await subprocess(PROCESS_FETCHCSS, {css});
+
+			const fetch = await subprocess(PROCESS_FETCHCSS, {css});
+			if (fetch.error) {
+				response.status(400).send('Error: Could not fetch css');
+				return;
+			}
+
+			const cssString = fetch.css;
 			const critical = await subprocess(PROCESS_PENTHOUSE, {...options, url, cssString});
-			response.send(critical);
+			if (critical.error) {
+				response.status(400).send('Error: Could not process page');
+				return;
+			}
+
+			response.send(critical.css);
 		} catch(error) {
 			console.error(error); // eslint-disable-line no-console
 			response.status(500).send('Error: ' + error.message);
