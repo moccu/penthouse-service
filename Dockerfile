@@ -23,7 +23,7 @@ COPY package.json /app
 COPY package-lock.json /app
 RUN npm install
 
-COPY index.js /app
+COPY src /app/src
 EXPOSE 3000
 
 # Execute penthouse service:
