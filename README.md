@@ -32,10 +32,12 @@ docker push moccu/penthouse-service:<version>
 ```
 
 Once the image is ready start the service using the following command.
-(`<portnumber>` is the port which you want to use for the service):
+
+* `<portnumber>` is the port which you want to use for the service
+* pass `--init` to prevent chrome from creating zombie processes (`[chrome] <defunct>`):
 
 ```bash
-docker run -p <portnumber>:3000 penthouse-service
+docker run -p <portnumber>:3000 --init moccu/penthouse-service:latest
 ```
 
 ## Usage
