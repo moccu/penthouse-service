@@ -15,6 +15,13 @@ This will start a server at port `3000`.
 
 ## Running service with docker
 
+The released images are available on
+[docker hub](https://hub.docker.com/r/moccu/penthouse-service/tags/). The
+version schema follows the installed version of
+[penthouse](https://github.com/pocketjoso/penthouse/releases).
+
+## Release new service version with docker
+
 Create a docker image of the penthouse-service using:
 
 ```bash
