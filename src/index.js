@@ -64,7 +64,7 @@ server
 			const cssString = fetch.css;
 			const critical = await subprocess(PROCESS_PENTHOUSE, {...options, url, cssString});
 			if (critical.error) {
-				response.status(400).send('Error: Could not process page. ' + critical.error.message);
+				response.status(400).send('Error: Could not process page');
 				return;
 			}
 
